@@ -8,6 +8,14 @@ import IconButton from '@material-ui/core/IconButton';
 import CloseIcon from '@material-ui/icons/Close';
 import Typography from '@material-ui/core/Typography';
 import { withStyles } from '@material-ui/core/styles';
+import styled from 'styled-components';
+
+const Icons = styled.p`
+  color: teal;
+  display: flex;
+  justify-content: space-evenly;
+`;
+
 
 const DialogTitle = withStyles(theme => ({
     root: {
@@ -77,7 +85,7 @@ const DialogTitle = withStyles(theme => ({
             open={this.state.open}
           >
             <DialogTitle id="customized-dialog-title" onClose={this.handleClose}>
-              Modal title
+              Laura Lively Photography
             </DialogTitle>
             <DialogContent>
               <Typography gutterBottom>
@@ -85,9 +93,14 @@ const DialogTitle = withStyles(theme => ({
                 show their products in the best light. Check out my portfolio and get in touch with me 
                 and lets make something beautiful.
               </Typography>
+              <Icons>
+              <i class="fab fa-500px fa-4x"></i>
+              <i class="fas fa-camera-retro fa-4x"></i>
+              <i class="fab fa-adobe fa-4x"></i>
+              </Icons>
             </DialogContent>
             <DialogActions>
-            <a href="/#home"><Button onClick={this.handleClose} color="primary">
+            <a href="https://500px.com/lauralively" target="_blank" rel="noopener noreferrer"><Button onClick={this.handleClose} color="primary">
                 Check out my Photography portfolio!
               </Button></a>
             </DialogActions>

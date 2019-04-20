@@ -8,6 +8,13 @@ import IconButton from '@material-ui/core/IconButton';
 import CloseIcon from '@material-ui/icons/Close';
 import Typography from '@material-ui/core/Typography';
 import { withStyles } from '@material-ui/core/styles';
+import styled from 'styled-components';
+
+const Icons = styled.p`
+  color: teal;
+  display: flex;
+  justify-content: space-evenly;
+`;
 
 const DialogTitle = withStyles(theme => ({
     root: {
@@ -21,6 +28,10 @@ const DialogTitle = withStyles(theme => ({
       top: theme.spacing.unit,
       color: theme.palette.grey[500],
     },
+    icons: {
+      color: 'teal',
+      paddingRight: ".5rem",
+    }
   }))(props => {
     const { children, classes, onClose } = props;
     return (
@@ -96,6 +107,17 @@ const DialogTitle = withStyles(theme => ({
               structure and funtionality of a website, you might as well make it page 
               with 1's 0's and nothing else.
               </p>  
+              <Icons>
+                <i class="fab fa-react fa-4x"></i>
+                <i class="fab fa-bootstrap fa-4x"></i>
+                <i class="fab fa-adobe fa-4x"></i>
+                <i class="fab fa-vuejs fa-4x"></i>
+                <i class="fab fa-css3-alt fa-4x"></i>
+                <i class="fab fa-html5 fa-4x"></i>
+                <i class="fab fa-figma fa-4x"></i>
+                <i class="fab fa-js-square fa-4x"></i>
+                <img src="https://material.io/tools/icons/static/material_logo.svg" alt="Material UI icon"/>
+              </Icons>
             </DialogContent>
             <DialogActions>
             <Button onClick={this.handleClose} color="primary">

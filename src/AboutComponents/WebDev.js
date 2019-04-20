@@ -8,6 +8,13 @@ import IconButton from '@material-ui/core/IconButton';
 import CloseIcon from '@material-ui/icons/Close';
 import Typography from '@material-ui/core/Typography';
 import { withStyles } from '@material-ui/core/styles';
+import styled from 'styled-components';
+
+const Icons = styled.p`
+  color: teal;
+  display: flex;
+  justify-content: space-evenly;
+`;
 
 const DialogTitle = withStyles(theme => ({
     root: {
@@ -87,6 +94,13 @@ const DialogTitle = withStyles(theme => ({
                 I develop with the end user in mind. Ease and usability are paramount. I use the 
                 latest technologies to create your project to run across devices.
               </Typography>
+              <Icons>
+              <i class="fab fa-node fa-4x"></i>                
+              <i class="fab fa-github fa-4x"></i>
+              <i class="fab fa-microsoft fa-4x"></i>
+              <i class="fab fa-aws fa-4x"></i>
+              <i class="fab fa-npm fa-4x"></i>
+              </Icons>
             </DialogContent>
             <DialogActions>
               <Button onClick={this.handleClose} color="primary">
